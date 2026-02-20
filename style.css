@@ -18,7 +18,7 @@ a:link{
 body{
     background-color: greenyellow;
     color: black;
-    text-align: center;
+    text-align: left;
 
 }
 img{
@@ -67,4 +67,40 @@ img{
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+.container div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: greenyellow;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: lawngreen;
 }
