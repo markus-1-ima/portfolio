@@ -19,7 +19,7 @@ nav{
     left: 0%;
     top: 0%;
     width: 100%;
-}
+  }
 a:link{
     color: black;
 }
@@ -118,5 +118,8 @@ ul li a {
 }
 
 ul li a:hover {
+
   background-color: #606C38;
 }
+
+
