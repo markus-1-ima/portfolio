@@ -81,7 +81,7 @@ img{
 
 .flip-card-back {
   background-color: cornsilk;
-  color: white;
+  color: black;
   transform: rotateY(180deg);
 }
 .container {
@@ -121,5 +121,6 @@ ul li a:hover {
 
   background-color: #606C38;
 }
+
 
 
