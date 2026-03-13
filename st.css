@@ -1,11 +1,11 @@
 .container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: lightgreen;
+  background-color: #283618;
   padding: 10px;
 }
 .container div {
-  background-color: greenyellow;
+  background-color: cornsilk;
   border: 1px solid black;
   padding: 10px;
   font-size: 30px;
@@ -13,7 +13,7 @@
 }
 header{
     color: black;
-    background-color: lightgreen;
+    background-color: #606C38;
     padding: 35px;
     font-size: 35px;
     text-align: left;
@@ -21,23 +21,26 @@ header{
 
 }
 nav{
-    background-color: lightgreen;
+    background-color: #606C38;
     text-align: right;
+    left: 0%;
+    top: 0%;
+    width: 100%;
 }
 a:link{
     color: black;
 }
 body{
-    background-color: greenyellow;
+    background-color: cornsilk;
     color: black;
     text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: greenyellow;
+  
 }
 li a {
   display: block;
@@ -48,4 +51,12 @@ li a {
 li a:hover {
   background-color: lightgreen;
   color: white;
+}
+footer{
+  background-color:#283618 ;
+  height: 100px;
+  width: 100%;
+  position:fixed ;
+  left: 0%;
+  bottom: 0%;
 }

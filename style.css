@@ -1,25 +1,41 @@
 
 header{
     color: black;
-    background-color: lightgreen;
+    background-color: #606C38;
     padding: 35px;
     font-size: 35px;
     text-align: left;
-    width: auto;
+    
+    
 
 }
+p{
+  text-align: center;
+}
 nav{
-    background-color: lightgreen;
+    background-color: #606C38;
     text-align: right;
+    
+    left: 0%;
+    top: 0%;
+    width: 100%;
 }
 a:link{
     color: black;
 }
 body{
-    background-color: greenyellow;
+    background-color: Cornsilk;
     color: black;
     text-align: left;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+  background-color:#283618 ;
+  height: 100px;
+  width: 100%;
+  position:fixed ;
+  left: 0%;
+  bottom: 0%;
 }
 img{
     align-self: center;
@@ -64,7 +80,7 @@ img{
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: cornsilk;
   color: white;
   transform: rotateY(180deg);
 }
@@ -86,7 +102,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: greenyellow;
+  background-color: cornsilk;
 }
 
 ul li {
@@ -102,5 +118,5 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: lawngreen;
+  background-color: #606C38;
 }
