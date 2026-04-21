@@ -16,6 +16,7 @@ p{
 nav{
     background-color: #606C38;
     text-align: right;
+    font-family: 'Times New Roman', Times, serif;
     
     left: 0%;
     top: 0%;
@@ -28,7 +29,7 @@ body{
     background-color: Cornsilk;
     color: black;
     text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 footer{
   background-color:#283618 ;
@@ -40,10 +41,10 @@ footer{
 }
 img{
     align-self: center;
-    width: 500px;
+    width: 300px;
     display: block;
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
 }
 .flip-card {
   background-color: transparent;
@@ -53,7 +54,7 @@ img{
 }
 
 .flip-card-inner {
-  position: relative;
+  
   width: 100%;
   height: 100%;
   text-align: center;
@@ -69,10 +70,11 @@ img{
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  text-align: center;
 }
 
 .flip-card-front {
@@ -81,6 +83,7 @@ img{
 }
 
 .flip-card-back {
+  text-align: center;
   background-color: cornsilk;
   color: black;
   transform: rotateY(180deg);
@@ -124,5 +127,9 @@ ul li a:hover {
 }
 
 
+h1{
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 

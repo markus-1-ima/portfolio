@@ -23,6 +23,7 @@ header{
 nav{
     background-color: #606C38;
     text-align: right;
+    font-family: 'Times New Roman', Times, serif;
     left: 0%;
     top: 0%;
     width: 100%;
@@ -34,7 +35,7 @@ body{
     background-color: cornsilk;
     color: black;
     text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 ul {
   list-style-type: none;
