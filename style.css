@@ -29,7 +29,7 @@ h2 {
 
 header {
   background-color: #606c38;
-  color: #fefae0; /* lys tekst for kontrast */
+  color: #fefae0;
   padding: 35px;
 }
 
@@ -48,14 +48,15 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* betre enn float */
+  display: flex;
+  flex-wrap: wrap; /* gjer menyen meir stabil på små skjermar */
 }
 
 nav ul li a {
   display: block;
   padding: 14px 16px;
   text-decoration: none;
-  color: #fefae0; /* lys tekst */
+  color: #fefae0;
   font-weight: bold;
 }
 
@@ -96,11 +97,13 @@ footer {
   height: 300px;
   perspective: 1000px;
   margin: 20px auto;
+  position: relative; /* viktig */
 }
 
 .flip-card-inner {
   width: 100%;
   height: 100%;
+  position: relative; /* viktig */
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -113,9 +116,11 @@ footer {
 .flip-card-front,
 .flip-card-back {
   position: absolute;
+  inset: 0; /* same som top:0; right:0; bottom:0; left:0; */
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
