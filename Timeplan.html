@@ -7,6 +7,7 @@
   <title>Timeplan</title>
   <link rel="stylesheet" href="st.css">
 </head>
+
 <body>
 
   <header>
@@ -17,8 +18,8 @@
     <ul>
       <li><a href="index.html">Hjem</a></li>
       <li><a href="fag.html">Mine fag</a></li>
-      <li><a href="Timeplan.html">Timeplan</a></li>
-      <li><a href="Kontakt_meg.html">Kontakt meg</a></li>
+      <li><a href="timeplan.html">Timeplan</a></li>
+      <li><a href="kontakt_meg.html">Kontakt meg</a></li>
       <li><a href="prosjekt.html">Prosjekt</a></li>
     </ul>
   </nav>
@@ -26,41 +27,51 @@
   <main>
     <section class="timeplan">
       <div class="container">
-        <div><strong>Måndag</strong></div>
-        <div><strong>Tysdag</strong></div>
-        <div><strong>Onsdag</strong></div>
-        <div><strong>Torsdag</strong></div>
-        <div><strong>Fredag</strong></div>
 
-        <div>Prod. og historiefortelling</div>
-        <div>Matematikk</div>
-        <div>Konseptutvikling og programmering</div>
-        <div>Matematikk</div>
-        <div>Fagdag</div>
+        <div class="dag">
+          <strong>Måndag</strong>
+          <div class="fag">Prod. og historiefortelling</div>
+          <div class="fag">Prod. og historiefortelling</div>
+          <div class="fag">Konseptutvikling og programmering</div>
+          <div class="fag">Kroppsøving</div>
+          <div class="fag">Teknologiforståelse</div>
+        </div>
 
-        <div>Prod. og historiefortelling</div>
-        <div>Matematikk / Engelsk</div>
-        <div>Konseptutvikling og programmering</div>
-        <div>Engelsk</div>
-        <div>Fagdag</div>
+        <div class="dag">
+          <strong>Tysdag</strong>
+          <div class="fag">Matematikk</div>
+          <div class="fag">Matematikk / Engelsk</div>
+          <div class="fag">Engelsk</div>
+          <div class="fag">Prod. og historiefortelling</div>
+          <div class="fag">Fagdagsfag</div>
+        </div>
 
-        <div>Konseptutvikling og programmering</div>
-        <div>Engelsk</div>
-        <div>Yrkesfagleg fordjuping</div>
-        <div>Teknologiforståelse</div>
-        <div>Fagdag</div>
+        <div class="dag">
+          <strong>Onsdag</strong>
+          <div class="fag">Konseptutvikling og programmering</div>
+          <div class="fag">Konseptutvikling og programmering</div>
+          <div class="fag">Yrkesfagleg fordjuping</div>
+          <div class="fag">Yrkesfagleg fordjuping</div>
+          <div class="fag">Yrkesfagleg fordjuping</div>
+        </div>
 
-        <div>Kroppsøving</div>
-        <div>Prod. og historiefortelling</div>
-        <div>Yrkesfagleg fordjuping</div>
-        <div>Teknologiforståelse</div>
-        <div>Fagdag</div>
+        <div class="dag">
+          <strong>Torsdag</strong>
+          <div class="fag">Matematikk</div>
+          <div class="fag">Engelsk</div>
+          <div class="fag">Teknologiforståelse</div>
+          <div class="fag">Teknologiforståelse</div>
+        </div>
 
-        <div>Teknologiforståelse</div>
-        <div>Fagdagsfag</div>
-        <div>Yrkesfagleg fordjuping</div>
-        <div>&nbsp;</div>
-        <div>Fagdag</div>
+        <div class="dag">
+          <strong>Fredag</strong>
+          <div class="fag">Fagdag</div>
+          <div class="fag">Fagdag</div>
+          <div class="fag">Fagdag</div>
+          <div class="fag">Fagdag</div>
+          <div class="fag">Fagdag</div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -68,7 +79,7 @@
   <footer>
     <p>&copy; Markus Sørdal</p>
   </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
 ``
