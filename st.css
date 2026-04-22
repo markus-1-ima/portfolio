@@ -20,11 +20,29 @@ a {
   text-decoration: none;
 }
 
+/* ===== TEKST ===== */
+
+p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 /* ===== HEADER ===== */
 
 header {
   background-color: #606c38;
-  color: #fefae0; /* lys tekst for kontrast */
+  color: #fefae0;
   padding: 35px;
 }
 
@@ -45,13 +63,17 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0;
 }
 
 nav ul li a {
   display: block;
   padding: 14px 16px;
-  text-decoration: none;
-  color: #fefae0; /* lys tekst */
+  color: #fefae0;
   font-weight: bold;
 }
 
@@ -59,6 +81,113 @@ nav ul li a:hover,
 nav ul li a:focus {
   background-color: #283618;
   color: #ffffff;
+}
+
+/* ===== HOVUDINNHALD ===== */
+
+main {
+  padding: 20px;
+}
+
+/* ===== INNHALDSBOKS ===== */
+
+.faginnhold {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fefae0;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== FAGLISTE ===== */
+
+.fagliste {
+  list-style: none;
+  padding: 0;
+  max-width: 750px;
+  margin: 40px auto;
+}
+
+.fagliste li {
+  background: linear-gradient(to right, #fefae0, #faedcd);
+  margin: 16px 0;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  border-left: 8px solid #606c38;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fagliste li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.fagliste a {
+  display: block;
+  padding: 18px 22px;
+  color: #283618;
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.fagliste a:hover,
+.fagliste a:focus {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.fagliste a::before {
+  content: "➜ ";
+  color: #606c38;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* ===== KONTAKTLISTE ===== */
+
+.kontaktliste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kontaktliste li {
+  background-color: #faedcd;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+  font-size: 18px;
+}
+
+.kontaktliste a {
+  color: #283618;
+  font-weight: bold;
+}
+
+.kontaktliste a:hover,
+.kontaktliste a:focus {
+  text-decoration: underline;
+}
+
+/* ===== PRESENTASJON ===== */
+
+.presentasjon {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.presentasjon p {
+  max-width: 700px;
+  margin: 25px auto 0;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 /* ===== GRID / CONTAINER ===== */
@@ -69,6 +198,9 @@ nav ul li a:focus {
   gap: 10px;
   background-color: #283618;
   padding: 10px;
+  max-width: 1100px;
+  margin: 30px auto;
+  border-radius: 12px;
 }
 
 .container div {
@@ -77,6 +209,15 @@ nav ul li a:focus {
   padding: 10px;
   font-size: 18px;
   text-align: center;
+}
+
+/* ===== BILETE ===== */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* ===== FOOTER ===== */
@@ -92,4 +233,57 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: #fefae0;
+  font-weight: bold;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+/* ===== MOBIL ===== */
+
+@media (max-width: 768px) {
+  header {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .fagliste a {
+    font-size: 18px;
+    padding: 16px 18px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    height: auto;
+    min-height: 80px;
+    padding: 15px;
+  }
+
+  body {
+    padding-bottom: 140px;
+  }
 }
