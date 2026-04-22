@@ -1,135 +1,143 @@
 
-header{
-    color: black;
-    background-color: #606C38;
-    padding: 35px;
-    font-size: 35px;
-    text-align: left;
-    
-    
+/* ===== GRUNNLEGGENDE STIL ===== */
 
+* {
+  box-sizing: border-box;
 }
-p{
+
+body {
+  background-color: cornsilk;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding-bottom: 120px; /* plass til footer */
+}
+
+/* ===== TEKST ===== */
+
+p {
   text-align: center;
-    color: black;
 }
-nav{
-    background-color: #606C38;
-    text-align: right;
-    font-family: 'Times New Roman', Times, serif;
-    
-    left: 0%;
-    top: 0%;
-    width: 100%;
-  }
-a:link{
-    color: black;
+
+h1,
+h2 {
+  text-align: left;
+  margin: 0;
 }
-body{
-    background-color: Cornsilk;
-    color: black;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
+
+/* ===== HEADER ===== */
+
+header {
+  background-color: #606c38;
+  color: #fefae0; /* lys tekst for kontrast */
+  padding: 35px;
 }
-footer{
-  background-color:#283618 ;
+
+header h1 {
+  font-size: 35px;
+}
+
+/* ===== NAV / MENY ===== */
+
+nav {
+  background-color: #606c38;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* betre enn float */
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #fefae0; /* lys tekst */
+  font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #283618;
+  color: #ffffff;
+}
+
+/* ===== BILETE ===== */
+
+img {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background-color: #283618;
+  color: #fefae0;
   height: 100px;
   width: 100%;
-  position:fixed ;
-  left: 0%;
-  bottom: 0%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-img{
-    align-self: center;
-    width: 300px;
-    display: block;
-    width: 300px;
-    height: 300px;
-}
+
+/* ===== FLIP CARD ===== */
+
 .flip-card {
-  background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;
+  margin: 20px auto;
 }
 
 .flip-card-inner {
-  
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  width: auto;
-  height: auto;
-  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: #bbbbbb;
 }
 
 .flip-card-back {
-  text-align: center;
-  background-color: cornsilk;
-  color: black;
+  background-color: #fefae0;
+  color: #000000;
   transform: rotateY(180deg);
-}
-.container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: dodgerblue;
-  padding: 10px;
-}
-.container div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
+  padding: 12px;
   text-align: center;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: cornsilk;
-}
 
-ul li {
-  float: left;
-}
+/* ===== BILETE I FLIP CARD ===== */
 
-ul li a {
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
-
-ul li a:hover {
-
-  background-color: #606C38;
-}
-
-
-h1{
-  text-align: left;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-
