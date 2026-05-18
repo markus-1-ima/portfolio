@@ -27,3 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     yearElement.textContent = new Date().getFullYear();
   }
 });
+
+// finn alle flip-cards
+const cards = document.querySelectorAll(".flip-card");
+
+// legg til klikk på kvar
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
