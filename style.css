@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  padding-bottom: 120px; /* plass til footer */
+  padding-bottom: 120px;
   background-color: var(--bakgrunn);
   color: var(--svart);
   font-family: "Times New Roman", Times, serif;
@@ -64,7 +64,7 @@ header h1 {
   text-align: left;
 }
 
-/* ===== NAV / MENY ===== */
+/* ===== NAV / MENY (MINDRE KNAPPAR) ===== */
 nav {
   width: 100%;
   background-color: var(--gronn-lys);
@@ -78,13 +78,10 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
-  margin: 0;
-}
-
 nav ul li a {
   display: block;
-  padding: 14px 16px;
+  padding: 8px 10px;   /* ↓ mindre */
+  font-size: 14px;     /* ↓ mindre */
   color: var(--lys);
   font-weight: bold;
 }
@@ -111,7 +108,7 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* ===== FAGLISTE ===== */
+/* ===== FAGLISTE (MINDRE KNAPPAR) ===== */
 .fagliste {
   max-width: 750px;
   margin: 40px auto;
@@ -121,7 +118,7 @@ main {
 
 .fagliste li {
   overflow: hidden;
-  margin: 16px 0;
+  margin: 12px 0;
   border-left: 8px solid var(--gronn-lys);
   border-radius: 16px;
   background: linear-gradient(to right, var(--lys), var(--beige));
@@ -130,72 +127,34 @@ main {
 }
 
 .fagliste li:hover {
-  transform: translateX(8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transform: translateX(6px);
 }
 
 .fagliste a {
   display: block;
-  padding: 18px 22px;
-  color: var(--gronn-mork);
-  font-size: 21px;
+  padding: 12px 14px;  /* ↓ mindre */
+  font-size: 16px;     /* ↓ mindre */
   font-weight: bold;
-  letter-spacing: 0.3px;
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.fagliste a:hover,
-.fagliste a:focus {
-  color: var(--svart);
-  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--gronn-mork);
 }
 
 .fagliste a::before {
   content: "➜ ";
-  margin-right: 8px;
-  color: var(--gronn-lys);
-  font-size: 20px;
+  margin-right: 6px;
+  font-size: 14px;   /* ↓ mindre pil */
 }
 
-/* ===== KONTAKTLISTE ===== */
+/* ===== KONTAKT ===== */
 .kontaktliste {
-  margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 .kontaktliste li {
-  margin: 12px 0;
-  padding: 16px 20px;
+  margin: 10px 0;
+  padding: 14px;
   border-radius: 14px;
   background-color: var(--beige);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
-  font-size: 18px;
-}
-
-.kontaktliste a {
-  color: var(--gronn-mork);
-  font-weight: bold;
-}
-
-.kontaktliste a:hover,
-.kontaktliste a:focus {
-  text-decoration: underline;
-}
-
-/* ===== PRESENTASJON / FORSIDE ===== */
-.presentasjon {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.presentasjon p {
-  max-width: 700px;
-  margin: 25px auto 0;
-  font-size: 20px;
-  line-height: 1.7;
 }
 
 /* ===== PROSJEKTGRID ===== */
@@ -208,43 +167,22 @@ main {
   padding: 0 20px;
 }
 
-.prosjekter article {
-  padding: 20px;
-  border-radius: 18px;
-  background-color: var(--lys);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
-
 /* ===== FOOTER ===== */
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--gronn-mork);
+  color: var(--lys);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  background-color: var(--gronn-mork);
-  color: var(--lys);
-  text-align: center;
 }
 
-footer a {
-  color: var(--lys);
-  font-weight: bold;
-}
 
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
-}
-
-/* ===== FLIP CARD ===== */
+/* ===== FLIP CARD (FIKSA) ===== */
 .flip-card {
-  position: relative;
   width: 300px;
   height: 300px;
   margin: 20px auto;
@@ -252,94 +190,65 @@ footer a:focus {
 }
 
 .flip-card-inner {
-  position: relative;
+  position: relative;             /* ✅ viktig */
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
   transition: transform 0.6s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner,
-.flip-card.flipped .flip-card-inner {
+/* snu */
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
+/* begge sider */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  inset: 0;                      /* ✅ enklare enn width/height */
   border-radius: 16px;
+  overflow: hidden;              /* ✅ hindrar bilde-stikk */
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
+/* framside */
 .flip-card-front {
-  background-color: #bbbbbb;
+  background-color: #bbb;
 }
 
 .flip-card-front img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
+  object-fit: cover;             /* ✅ fint bilde */
 }
 
+/* bakside */
 .flip-card-back {
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
   background-color: var(--lys);
   color: var(--svart);
-  text-align: center;
   transform: rotateY(180deg);
 }
 
 /* ===== MOBIL ===== */
 @media (max-width: 768px) {
-  body {
-    padding-bottom: 140px;
-  }
-
-  header {
-    padding: 25px 20px;
-  }
-
-  header h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-
   nav ul {
     flex-direction: column;
   }
 
   nav ul li a {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 13px;   /* endå litt mindre */
+    padding: 8px;
   }
 
   .fagliste a {
-    padding: 16px 18px;
-    font-size: 18px;
-  }
-
-  .prosjekter {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-
-  .flip-card {
-    width: 260px;
-    height: 260px;
-  }
-
-  footer {
-    height: auto;
-    min-height: 80px;
-    padding: 15px;
+    font-size: 15px;
+    padding: 10px;
   }
 }
