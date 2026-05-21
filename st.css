@@ -6,18 +6,18 @@
   --lys: #fefae0;
   --beige: #faedcd;
   --bakgrunn: cornsilk;
-  --svart: #000000;
-  --kvit: #ffffff;
+  --svart: #000;
+  --kvit: #fff;
 }
 
-/* ===== GRUNNLEGGANDE ===== */
+/* ===== RESET / GRUNN ===== */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding-bottom: 120px; /* plass til footer */
+  padding-bottom: 120px;
   background-color: var(--bakgrunn);
   color: var(--svart);
   font-family: "Times New Roman", Times, serif;
@@ -76,15 +76,12 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
-  margin: 0;
-}
-
 nav ul li a {
   display: block;
-  padding: 14px 16px;
-  color: var(--lys);
+  padding: 8px 10px;
+  font-size: 14px;
   font-weight: bold;
+  color: var(--lys);
 }
 
 nav ul li a:hover,
@@ -94,7 +91,7 @@ nav ul li a.active {
   color: var(--kvit);
 }
 
-/* ===== HOVUDINNHALD ===== */
+/* ===== LAYOUT ===== */
 main {
   padding: 20px;
 }
@@ -104,7 +101,7 @@ main {
   margin: 30px auto;
 }
 
-/* ===== INNHALDSBOKS ===== */
+/* ===== BOKSAR ===== */
 .faginnhold {
   max-width: 750px;
   margin: 30px auto;
@@ -123,13 +120,13 @@ main {
 }
 
 .fagliste li {
-  overflow: hidden;
   margin: 16px 0;
+  overflow: hidden;
   border-left: 8px solid var(--gronn-lys);
   border-radius: 16px;
   background: linear-gradient(to right, var(--lys), var(--beige));
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: 0.25s;
 }
 
 .fagliste li:hover {
@@ -139,12 +136,10 @@ main {
 
 .fagliste a {
   display: block;
-  padding: 18px 22px;
-  color: var(--gronn-mork);
-  font-size: 21px;
+  padding: 12px 14px;
+  font-size: 16px;
   font-weight: bold;
-  letter-spacing: 0.3px;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  color: var(--gronn-mork);
 }
 
 .fagliste a:hover,
@@ -155,16 +150,15 @@ main {
 
 .fagliste a::before {
   content: "➜ ";
-  margin-right: 8px;
-  color: var(--gronn-lys);
-  font-size: 20px;
+  margin-right: 6px;
+  font-size: 14px;
 }
 
-/* ===== KONTAKTLISTE ===== */
+/* ===== KONTAKT ===== */
 .kontaktliste {
-  margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .kontaktliste li {
@@ -177,12 +171,11 @@ main {
 }
 
 .kontaktliste a {
-  color: var(--gronn-mork);
   font-weight: bold;
+  color: var(--gronn-mork);
 }
 
-.kontaktliste a:hover,
-.kontaktliste a:focus {
+.kontaktliste a:hover {
   text-decoration: underline;
 }
 
@@ -202,7 +195,6 @@ main {
 }
 
 /* ===== TIMEPLAN ===== */
-/* Slett denne blokka viss du ikkje skal bruke timeplan */
 .timeplan {
   padding: 1rem;
   font-family: system-ui, sans-serif;
@@ -228,18 +220,15 @@ main {
   display: block;
   margin-bottom: 10px;
   padding: 8px;
-  border-bottom: 2px solid var(--gronn-lys);
-  border-radius: 6px;
-  background-color: var(--lys);
   text-align: center;
-  font-size: 1.05rem;
+  border-bottom: 2px solid var(--gronn-lys);
+  background-color: var(--lys);
 }
 
 .timeplan .fag {
   padding: 8px 4px;
-  border-bottom: 1px solid #ccc;
   text-align: center;
-  font-size: 0.95rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .timeplan .fag:last-child {
@@ -249,47 +238,44 @@ main {
 /* ===== FOOTER ===== */
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100px;
-  padding: 10px;
   background-color: var(--gronn-mork);
   color: var(--lys);
   text-align: center;
 }
 
 footer a {
-  color: var(--lys);
   font-weight: bold;
 }
 
-footer a:hover,
-footer a:focus {
+footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== FLIP CARD (berre ekstra regel for JS-klikk) ===== */
+/* ===== FLIP CARD ===== */
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* ===== MOBIL ===== */
+/* ===== RESPONSIV ===== */
 @media (max-width: 768px) {
   body {
-    padding-bottom: 140px;
+    padding-bottom: 130px;
   }
 
   header {
-    padding: 25px 20px;
+    padding: 24px 16px;
+    text-align: center;
   }
 
   header h1 {
     font-size: 28px;
-    text-align: center;
   }
 
   nav ul {
@@ -297,52 +283,56 @@ footer a:focus {
   }
 
   nav ul li a {
+    width: 100%;
+    padding: 15px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .fagliste a {
-    padding: 16px 18px;
-    font-size: 18px;
+  main {
+    padding: 14px;
+  }
+
+  .container,
+  .faginnhold,
+  .fagliste,
+  .presentasjon {
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .fagliste li:hover {
+    transform: none;
   }
 
   .timeplan .container {
     grid-template-columns: 1fr;
   }
 
-  .timeplan .dag {
-    margin-bottom: 0.5rem;
-  }
-
-  .timeplan .dag strong,
-  .timeplan .fag {
-    text-align: left;
-  }
-
-  .timeplan .fag {
-    padding-left: 6px;
-  }
-
   footer {
     height: auto;
-    min-height: 80px;
-    padding: 15px;
+    padding: 14px;
   }
 }
-/* ===== MOBIL ===== */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
   }
 
   nav ul li a {
-    font-size: 13px;   /* endå litt mindre */
-    padding: 8px;
+    font-size: 16px;
   }
 
-  .fagliste a {
-    font-size: 15px;
-    padding: 10px;
+  h2 {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }
-

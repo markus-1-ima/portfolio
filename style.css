@@ -6,11 +6,11 @@
   --lys: #fefae0;
   --beige: #faedcd;
   --bakgrunn: cornsilk;
-  --svart: #000000;
-  --kvit: #ffffff;
+  --svart: #000;
+  --kvit: #fff;
 }
 
-/* ===== GRUNNLEGGENDE ===== */
+/* ===== RESET / GRUNN ===== */
 * {
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding-bottom: 120px;
-  background-color: var(--bakgrunn);
+  background: var(--bakgrunn);
   color: var(--svart);
   font-family: "Times New Roman", Times, serif;
 }
@@ -36,38 +36,35 @@ img {
 }
 
 /* ===== TEKST ===== */
-h1,
-h2 {
+h1, h2 {
   margin: 0;
 }
 
 h2 {
-  margin-bottom: 15px;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 p {
+  text-align: center;
   font-size: 18px;
   line-height: 1.6;
-  text-align: center;
 }
 
 /* ===== HEADER ===== */
 header {
   padding: 35px;
-  background-color: var(--gronn-lys);
+  background: var(--gronn-lys);
   color: var(--lys);
 }
 
 header h1 {
   font-size: 35px;
-  text-align: left;
 }
 
-/* ===== NAV / MENY (MINDRE KNAPPAR) ===== */
+/* ===== NAV ===== */
 nav {
-  width: 100%;
-  background-color: var(--gronn-lys);
+  background: var(--gronn-lys);
 }
 
 nav ul {
@@ -78,37 +75,36 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a {
+nav a {
   display: block;
-  padding: 8px 10px;   /* ↓ mindre */
-  font-size: 14px;     /* ↓ mindre */
-  color: var(--lys);
+  padding: 8px 10px;
+  font-size: 14px;
   font-weight: bold;
+  color: var(--lys);
 }
 
-nav ul li a:hover,
-nav ul li a:focus,
-nav ul li a.active {
-  background-color: var(--gronn-mork);
+nav a:hover,
+nav a:focus,
+nav a.active {
+  background: var(--gronn-mork);
   color: var(--kvit);
 }
 
-/* ===== HOVUDINNHALD ===== */
+/* ===== LAYOUT ===== */
 main {
   padding: 20px;
 }
 
-/* ===== INNHALDSBOKS ===== */
 .faginnhold {
   max-width: 750px;
   margin: 30px auto;
   padding: 20px;
-  background-color: var(--lys);
+  background: var(--lys);
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* ===== FAGLISTE (MINDRE KNAPPAR) ===== */
+/* ===== FAGLISTE ===== */
 .fagliste {
   max-width: 750px;
   margin: 40px auto;
@@ -117,13 +113,13 @@ main {
 }
 
 .fagliste li {
-  overflow: hidden;
   margin: 12px 0;
   border-left: 8px solid var(--gronn-lys);
   border-radius: 16px;
+  overflow: hidden;
   background: linear-gradient(to right, var(--lys), var(--beige));
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+  transition: 0.25s;
 }
 
 .fagliste li:hover {
@@ -132,8 +128,8 @@ main {
 
 .fagliste a {
   display: block;
-  padding: 12px 14px;  /* ↓ mindre */
-  font-size: 16px;     /* ↓ mindre */
+  padding: 12px 14px;
+  font-size: 16px;
   font-weight: bold;
   color: var(--gronn-mork);
 }
@@ -141,7 +137,7 @@ main {
 .fagliste a::before {
   content: "➜ ";
   margin-right: 6px;
-  font-size: 14px;   /* ↓ mindre pil */
+  font-size: 14px;
 }
 
 /* ===== KONTAKT ===== */
@@ -154,10 +150,10 @@ main {
   margin: 10px 0;
   padding: 14px;
   border-radius: 14px;
-  background-color: var(--beige);
+  background: var(--beige);
 }
 
-/* ===== PROSJEKTGRID ===== */
+/* ===== PROSJEKT ===== */
 .prosjekter {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -173,15 +169,14 @@ footer {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background-color: var(--gronn-mork);
-  color: var(--lys);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--gronn-mork);
+  color: var(--lys);
 }
 
-
-/* ===== FLIP CARD (FIKSA) ===== */
+/* ===== FLIP CARD ===== */
 .flip-card {
   width: 300px;
   height: 300px;
@@ -189,70 +184,127 @@ footer {
   perspective: 1000px;
 }
 
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
 .flip-card-inner {
-  position: relative;             /* ✅ viktig */
+  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: 0.6s;
   transform-style: preserve-3d;
 }
 
-/* snu */
+.flip-card.flipped .flip-card-inner,
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* begge sider */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  inset: 0;                      /* ✅ enklare enn width/height */
+  inset: 0;
   border-radius: 16px;
-  overflow: hidden;              /* ✅ hindrar bilde-stikk */
+  overflow: hidden;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* framside */
-.flip-card-front {
-  background-color: #bbb;
 }
 
 .flip-card-front img {
   width: 100%;
   height: 100%;
-  object-fit: cover;             /* ✅ fint bilde */
+  object-fit: cover;
 }
 
-/* bakside */
 .flip-card-back {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
   text-align: center;
-  background-color: var(--lys);
-  color: var(--svart);
+  background: var(--lys);
   transform: rotateY(180deg);
 }
 
-/* ===== MOBIL ===== */
+/* ===== RESPONSIV ===== */
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 130px;
+  }
+
+  header {
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
   nav ul {
     flex-direction: column;
   }
 
-  nav ul li a {
-    font-size: 13px;   /* endå litt mindre */
-    padding: 8px;
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
 
-  .fagliste a {
+  main {
+    padding: 14px;
+  }
+
+  .faginnhold,
+  .fagliste {
+    margin: 20px;
+  }
+
+  .fagliste li:hover {
+    transform: none;
+  }
+
+  .prosjekter {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 280px;
+    height: 260px;
+  }
+
+  footer {
+    height: auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav a {
     font-size: 15px;
     padding: 10px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .flip-card {
+    max-width: 250px;
+    height: 240px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 12px;
   }
 }
