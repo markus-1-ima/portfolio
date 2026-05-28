@@ -45,7 +45,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-p {
+p, pre {
   text-align: center;
   font-size: 18px;
   line-height: 1.6;
