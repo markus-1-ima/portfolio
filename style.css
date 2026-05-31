@@ -35,6 +35,16 @@ img {
   margin: 0 auto;
 }
 
+/* ===== IMG =====*/
+img {
+  display: block;
+  max-width: 70%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
 /* ===== TEKST ===== */
 h1, h2 {
   margin: 0;
@@ -222,6 +232,24 @@ footer {
   transform: rotateY(180deg);
 }
 
+/* ===== Button ===== */
+.button a {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--gronn-lys);
+  color: var(--lys);
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.button a:hover {
+  background: var(--beige);
+  color: var(--gronn-mork);
+  transform: scale(1.05);
+}
+
+
 /* ===== RESPONSIV ===== */
 @media (max-width: 768px) {
   body {
@@ -308,3 +336,4 @@ footer {
     padding: 12px;
   }
 }
+
